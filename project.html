@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Έργο | MIRAGE</title>
+    <title>Project | MIRAGE</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,27 +31,32 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Αρχική</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="partners.html">Φορείς</a>
+                        <a class="nav-link" href="partners.html">Partners</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="project.html">Το έργο</a>
+                        <a class="nav-link" href="project.html">The Project</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="progress.html">Progress</a>
+                      </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="publications.html">Δημοσιεύσεις</a>
+                        <a class="nav-link" href="https://bgpartemis.org/">Artemis</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="publications.html">Publications</a>
+                      </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Επικοινωνία</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">Νέα</a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                      </li> -->
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="en/project.html">EN</a>
+                        <a class="nav-link" href="el/project.html">EL</a>
                     </li>
                 </ul>
             </div>
@@ -69,11 +74,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#antikeimeno">Αντικείμενο</a>
+                    <a class="nav-link" href="#antikeimeno">Scope</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#stoxoi">Στόχοι</a>
+                    <a class="nav-link" href="#stoxoi">Objectives</a>
                 </li>
 
                 <li class="nav-item">
@@ -82,10 +87,6 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="#artemis_as_a_service">ARTEMIS-as-a-service</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#poreia">Πορεία</a>
                 </li>
             </ul>
         </div>
@@ -96,176 +97,126 @@
         <!-- Overview Section -->
         <div class="row">
             <div class="col-lg-15">
-                <h1>Αντικείμενο και Στόχοι του Έργου</h1>
+                <h1>Scope and Objectives of the Project</h1>
                 <hr>
-                <h3 class="section" id="antikeimeno">Αντικείμενο</h3>
+                <h3 class="section" id="antikeimeno">Scope</h3>
                 <p>
-                    Το Διαδίκτυο είναι ένα δίκτυο από αυτόνομα δίκτυα/συστήματα που διασυνδέονται με στόχο την παροχή
-                    υπηρεσιών επικοινωνίας σε τελικούς χρήστες (ιδιώτες, επιχειρήσεις, δημόσιους οργανισμούς),
-                    επικοινωνώντας
-                    μεταξύ τους ώστε να δρομολογήσουν πακέτα πληροφορίας. Η επικοινωνία αυτή υλοποιείται στο επίπεδο
-                    ελέγχου
-                    (control plane) με το πρωτόκολλο BGP, βάσει του οποίου εφαρμόζονται σε κάθε δίκτυο οι πολιτικές
-                    εισερχόμενης
-                    και εξερχόμενης ροής πακέτων μέσω της ανακοίνωσης και επιλογής μονοπατιών προς περιοχές διαδικτυακών
-                    διευθύνσεων (IP prefixes).
+                    The Internet is a network of autonomous networks / systems that are interconnected in order to
+                    provide communication services to end users (individuals, businesses, public organizations),
+                    communicating with each other to route information packets. This communication is implemented at the
+                    control plane level with the BGP protocol, based on which the policies of incoming and outgoing
+                    packet flows are applied to each network through the announcement and selection of paths to Internet
+                    address areas (IP prefixes).
                 </p>
                 <p>
-                    Το BGP σχεδιάστηκε χωρίς την πρόβλεψη εγγενών μηχανισμών ασφάλειας (π.χ. έλεγχος αυθεντικότητας) της
-                    ανταλλασσόμενης πληροφορίας δρομολόγησης δεδομένων. Μια τέτοια σοβαρή έλλειψη οδηγεί συχνά (εδώ και
-                    δεκαετίες) σε επιθέσεις γνωστές ως “BGP prefix hijacking”, όπου ένα ή περισσότερα δίκτυα, είτε λόγω
-                    ανθρώπινου
-                    λάθους είτε εκ (κακόβουλης) πρόθεσης, ανακοινώνουν ψευδείς πληροφορίες ελέγχου δρομολόγησης. Η
-                    πληροφορία αυτή διαδίδεται σε όλο το Διαδίκτυο μέσω του BGP και οδηγεί στην ανακατεύθυνση δεδομένων
-                    προς
-                    μη έγκυρους προορισμούς, όπου μπορεί να υπόκεινται σε καταστροφή (και διακοπή των σχετικών
-                    υπηρεσιών),
-                    υποκλοπή ή/και αλλοίωση.
+                    BGP was designed without inherent security mechanisms (e.g. authentication) of the exchanged data
+                    routing information. Such a serious shortcoming often leads (for decades now) to attacks known as
+                    "BGP prefix hijacking", where one or more networks, either due to human error or (malicious) intent,
+                    report false routing information. This information is disseminated throughout the Internet via the
+                    BGP and leads to the redirection of data to invalid destinations, where they may be subject to
+                    destruction (and interruption of relevant services), interception and/or alteration.
                 </p>
                 <p>
-                    Οι διαθέσιμοι μηχανισμοί άμυνας ενάντια σε ανάλογες επιθέσεις είτε δρουν εκ των προτέρων,
-                    στηριζόμενοι στην
-                    αυθεντικοποίηση των πληροφοριών δρομολόγησης (RPKI, BGPsec, κλπ.), είτε λαμβάνουν χώρα μετά το
-                    συμβάν
-                    (ανίχνευση και μη αυτοματοποιημένη αντιμετώπιση). Οι εκ των προτέρων μηχανισμοί άμυνας είναι συνήθως
-                    περιορισμένοι και μη αποτελεσματικοί. Συγκεκριμένα, απαιτούν υλοποίηση από την πλειονότητα των
-                    δικτύων,
-                    συμμόρφωση σε κεντρικές αρχές πιστοποίησης, καθώς και αλλαγές στο BGP, απαιτήσεις που ιστορικά έχει
-                    αποδειχθεί εξαιρετικά δύσκολο να επιτευχθούν. Τα συστήματα για εκ των υστέρων ανίχνευση και
-                    αντίδραση
-                    καθυστερούν ή/και απαιτούν τρίτους για την ομαλή λειτουργία και συντήρησή τους. Συχνά απαιτούνται
-                    ώρες ή
-                    ακόμα και ημέρες για να ανακτηθεί η πλήρης λειτουργικότητα ενός δικτύου μετά από τέτοιες επιθέσεις,
-                    με
-                    αποτέλεσμα ανυπολόγιστες οικονομικές ζημιές. Για παράδειγμα, το 2018, για ώρες ο μισός πληθυσμός της
-                    Ιαπωνίας έμεινε χωρίς πρόσβαση στο Διαδίκτυο, λόγω μιας λανθασμένης ρύθμισης του δικτύου της Google.
+                    The available defence mechanisms against such attacks either act in advance, based on the
+                    authentication of routing information (RPKI, BGPsec, etc.), or take place after the event (detection
+                    and non-automated response). Ex-ante defense mechanisms are usually limited and ineffective. In
+                    particular, they require implementation by most networks, compliance with central certification
+                    authorities, as well as changes to the BGP, requirements that have historically been extremely
+                    difficult to achieve. Ex-post detection and response systems are delayed and/or require third
+                    parties to operate and maintain them properly. It often takes hours or even days to recover the full
+                    functionality of a network after such attacks, resulting in immeasurable financial losses. For
+                    example, in 2018, for hours, half the population of Japan was left without Internet access due to a
+                    misconfiguration of the Google network.
                 </p>
 
                 <p>
-                    Το αντικείμενο του έργου “MIRAGE” (Mitigation of Internet Routing Attacks Globally and Efficiently)
-                    είναι η
-                    ανάπτυξη ενός προηγμένου συστήματος που θα στηρίζεται σε νέα χαρακτηριστικά και υπηρεσίες γύρω από
-                    το
-                    εργαλείο ανοιχτού κώδικα ARTEMIS, το οποίο αναπτύχθηκε από την ερευνητική ομάδα INSPIRE του ΙΤΕ.
-                    Στόχος
-                    του ARTEMIS είναι η επιτήρηση του επιπέδου ελέγχου του Διαδικτύου και η ακριβής και πλήρης ανίχνευση
-                    επιθέσεων BGP prefix hijacking. Βασικό πλεονέκτημα του ARTEMIS είναι ότι μειώνει σημαντικά τον χρόνο
-                    ανίχνευσης-αντιμετώπισης από ώρες ή ημέρες σε μερικά δευτερόλεπτα, όπως επιβεβαίωσαν πειράματα υπό
-                    πραγματικές συνθήκες, καθιστώντας το state-of-the-art διεθνώς μεταξύ των αντίστοιχων διαθέσιμων
-                    υπηρεσιών
-                    προστασίας. Τα αποτελέσματα της εφαρμογής της βασικής έκδοσης του ARTEMIS έχουν δημοσιευτεί σε
-                    κορυφαία
-                    επιστημονικά περιοδικά (ΙΕΕΕ/ΑCM Transactions on Networking) και έχουν προσελκύσει το ενδιαφέρον
-                    διεθνών
-                    ΜΜΕ και blogs από έγκριτους φορείς (APNIC, IBM). Επίσης, έχει υιοθετηθεί από οργανισμούς διασύνδεσης
-                    δικτύων
-                    με εκατοντάδες δίκτυα-πελάτες για την προστασία των δικτυακών τους πόρων.
+                    The scope of the “MIRAGE” project (Mitigation of Internet Routing Attacks Globally and Efficiently)
+                    is to develop an advanced system based on new features and services around the ARTEMIS open-source
+                    tool, developed by FORTH's INSPIRE research team. ARTEMIS aims to monitor the level of control of
+                    the Internet and the accurate and complete detection of BGP prefix hijacking attacks. A key
+                    advantage of ARTEMIS is that it significantly reduces detection-response time from hours or days to
+                    seconds, as confirmed by real-world experiments, making it state-of-the-art internationally among
+                    the respective protection services available. The results of the implementation of the basic version
+                    of ARTEMIS have been published in leading scientific journals (IEEE / ACM Transactions on
+                    Networking) and have attracted the interest of international media and blogs from reputable bodies
+                    (APNIC, IBM). It has also been adopted by network interconnectors with hundreds of client networks
+                    to protect their network resources.
                 </p>
                 <hr>
-                <h3 class="section" id="stoxoi">Στόχοι</h3>
+                <h3 class="section" id="stoxoi">Objectives</h3>
                 <ul>
                     <li>
-                        Έρευνα και ανάπτυξη επιπλέον καινοτόμων τεχνικών χαρακτηριστικών του συστήματος ARTEMIS με
-                        εμπορικό
-                        ενδιαφέρον, συγκεκριμένα:
+                        Research and development of additional innovative technical features of the ARTEMIS system with
+                        commercial interest, namely:
                         <ol>
                             <li>
-                                Tην αυτοματοποίηση των διαδικασιών ρύθμισης του συστήματος
+                                The automation of system configuration pipelines
                             </li>
                             <li>
-                                Tην
-                                αυτοματοποίηση του μηχανισμού αντιμετώπισης επιθέσεων και
+                                The automation of attack mechanism and
                             </li>
                             <li>
-                                Tην ανίχνευση προχωρημένων μορφών
-                                επιθέσεων (route leaks)
+                                Detection of advanced forms of attacks (route leaks)
                             </li>
                         </ol>
                     </li>
                     <li>
-                        Ανάπτυξη διεπαφής χρήστη για mobile εφαρμογές για την εύκολη εποπτεία του συστήματος από κινητές
-                        συσκευές, και χρήση mobile τεχνολογιών για άμεσες ειδοποιήσεις όταν επιθέσεις λαμβάνουν χώρα.
+                        Development of mobile user interface for easy monitoring of the system by mobile devices, and
+                        use of mobile technologies for instant notifications when attacks take place.
                     </li>
                     <li>
-                        Ανάπτυξη μιας νέας εμπορικής υπηρεσίας “ARTEMIS-as-a-service”, όπου το σύστημα θα μπορεί να
-                        εκτελείται και
-                        στις εγκαταστάσεις παρόχων υπηρεσιών hosting (υπηρεσίες σύννεφου) και να εκτελείται για κάθε
-                        πελάτη ένα
-                        ξεχωριστό στιγμιότυπο της εφαρμογής, παρέχοντας με αυτό τον τρόπο (αυτόματη) κλιμάκωση του
-                        συστήματος
-                        βάσει φόρτου, απομόνωση εικονικών χώρων πρόσβασης πελατών για μεγαλύτερη ασφάλεια, και
-                        υποστήριξη
-                        πολλαπλών σημείων λειτουργίας για παροχή υψηλής διαθεσιμότητας.
+                        Development of a new commercial service "ARTEMIS-as-a-service", where the system can be run in
+                        the facilities of hosting service providers (cloud services) and run for each customer a
+                        separate snapshot of the application, thus providing (automatic) escalation of the load-based
+                        system, isolation of virtual customer access areas for greater security, and support for
+                        multiple operating points to provide high availability.
                     </li>
                     <li>
-                        Ανάπτυξη εκπαιδευτικού υλικού (παρουσιάσεις, τεχνικές αναφορές, εγχειρίδια χρήσης) που
-                        απαιτείται για την
-                        εκπαίδευση των χρηστών του νέου συστήματος όσον αφορά την εγκατάσταση και χρήση του καθώς και
-                        διάχυση
-                        αποτελεσμάτων (π.χ. μέσω ερευνητικών δημοσιεύσεων) τόσο στην ερευνητική κοινότητα όσο και στην
-                        βιομηχανία.
+                        Development of educational material (presentations, technical reports, user manuals) required to
+                        educate users of the new system regarding its installation and use as well as dissemination of
+                        results (e.g. through research publications) to both the research community and industry.
                     </li>
                     <li>
-                        Εφαρμογή του έργου σαν ένα πλήρες σύστημα (τρέχουσα υλοποίηση του ARTEMIS, επιπρόσθετες
-                        λειτουργίες,
-                        mobile διεπαφή χρήστη, ARTEMIS-as-a-service) σε πραγματικά δίκτυα για την αξιολόγηση του
-                        συστήματος υπό
-                        ρεαλιστικές συνθήκες λειτουργίας και συλλογή δεδομένων και πληροφοριών από τους μηχανικούς του
-                        κέντρου
-                        διαχείρισης του δικτύου για την ευκολία χρήσης του συστήματος και την αποτελεσματικότητα του.
+                        Implementation of the project as a complete system (current implementation of ARTEMIS,
+                        additional functions, mobile user interface, ARTEMIS-as-a-service) in real networks for the
+                        evaluation of the system under realistic operating conditions and collection of data and
+                        information by the engineers of the network administration center; for the ease of use of the
+                        system and its efficiency.
                     </li>
                     <li>
-                        Διερεύνηση μηχανισμών εμπορικής αξιοποίησης των υπηρεσιών του έργου από τους εμπλεκόμενους
-                        φορείς.
+                        Investigation of commercial utilization mechanisms of the project services by the involved
+                        partners.
                     </li>
                 </ul>
                 <hr>
                 <h3 class="section" id="mobile_artemis">Mobile ARTEMIS</h3>
                 <p>
-                    Θα σχεδιαστεί και θα υλοποιηθεί το “mobile ARTEMIS”, από την εταιρία Cytech, μία mobile εφαρμογή του
-                    συστήματος με έμφαση
-                    στην
-                    ευκολία χρήσης και στην συντήρηση και υποστήριξη της. Συγκεκριμένα, η εφαρμογή θα μπορεί να
-                    εκτελεστεί σε
-                    κινητά τηλέφωνα, προσαρμοσμένη στους περιορισμούς της εκάστοτε mobile πλατφόρμας. Θα λειτουργεί τόσο
-                    σε
-                    συσκευές με λειτουργικό Αndroid όσο και iOS.
+                    Cytech will design and implement "Mobile ARTEMIS" - a mobile application of the system with an
+                    emphasis on ease of use and its maintenance and support. Specifically, the application can be run on
+                    mobile phones, adapted to the limitations of each mobile platform. It will work on both Android and
+                    iOS devices.
                 </p>
                 <p>
-                    Επιπλέον, θα αναπτυχθούν μηχανισμοί για την ειδοποίηση χρηστών σε πραγματικό χρόνο (άμεση ενημέρωση)
-                    σχετικά με νέες επιθέσεις, με χρήση συστημάτων mobile notifications (sms, push notifications κλπ.).
-                    Αυτοί οι
-                    μηχανισμοί θα λειτουργούν και σε παράλληλα δίκτυα όπως δίκτυα κινητής τηλεφωνίας. Η χρήση αυτών των
-                    ειδοποιήσεων θα επιτρέπει στους διαχειριστές των
-                    δικτύων να
-                    αποκτήσουν γρήγορα βασική ενημέρωση όπου και αν βρίσκονται, ώστε αν επιθυμούν περισσότερες
-                    πληροφορίες
-                    να χρησιμοποιήσουν την web εφαρμογή του ARTEMIS για να εμβαθύνουν καθώς και να δράσουν για την
-                    αντιμετώπιση των προβλημάτων. Το σύστημα ειδοποιήσεων θα φροντίσει ώστε η πληροφορία που μεταφέρεται
-                    να μην είναι ευαίσθητη ή να είναι κρυπτογραφημένη για λόγους ασφάλειας και ιδιωτικότητας.
+                    In addition, mechanisms will be developed to alert users in real-time (instant notification) of new
+                    attacks, using mobile notification systems (SMS, push notifications, etc.). These mechanisms will
+                    also work on parallel networks such as mobile networks. Using these alerts will allow network
+                    administrators to quickly get basic information wherever they are, so if they want more information
+                    they can use the ARTEMIS web application to deepen and take action to troubleshoot. The notification
+                    system will ensure that the information being transmitted is not sensitive or is encrypted due to
+                    security and privacy reasons.
                 </p>
                 <hr>
                 <h3 class="section" id="artemis_as_a_service">ARTEMIS-as-a-service</h3>
-                <p>Θα σχεδιαστεί και θα υλοποιηθεί το “ARTEMIS-as-a-service”, από την εταιρία Enartia μία νέα υπηρεσία
-                    τύπου cloud hosting, η
-                    οποία θα
-                    επιτρέπει σε χρήστες του συστήματος να έχουν πρόσβαση από οποιοδήποτε σημείο του Διαδικτύου χωρίς να
-                    ανησυχούν για θέματα ασφαλείας ή απόδοσης. Όσον αφορά τον
-                    χειρισμό ευαίσθητων δεδομένων που προέρχονται από το δίκτυο-πελάτη (όπως αρχεία ρύθμισης, data
-                    feeds), θα
-                    μπορεί ο πελάτης να επιλέξει την τοποθεσία του cloud datacenter καθώς και αν όλα τα δεδομένα θα
-                    είναι
-                    κρυπτογραφημένα. Με τον τρόπο αυτό το ARTEMIS-as-a-service θα μπορεί να είναι διαθέσιμο ως υπηρεσία
-                    σε
-                    εταιρίες που δεν επιθυμούν να εγκαταστήσουν κάποιο λογισμικό στο εσωτερικό τους δίκτυο ή σε
-                    περιπτώσεις που
-                    η διαδικασία αυτή είναι ακριβή και χρονοβόρα. Επίσης, η υπηρεσία αυτή θα είναι χρήσιμη σε εταιρείες
-                    που
-                    επιθυμούν πρόσβαση σε απομακρυσμένες (π.χ. σε άλλη ήπειρο) πηγές επιτήρησης BGP δεδομένων και
-                    ρύθμισης
-                    δικτυακών συσκευών, μιας που δεν θα απαιτείται φυσική παρουσία τους (π.χ. dedicated rackspace), με
-                    τα σχετικά
-                    επιπλέον κόστη που συνεπάγεται.</p>
+                <p>Enartia will design and implement "ARTEMIS-as-a-service", a new cloud hosting service, which will
+                    allow system users to access it from anywhere on the Internet without having to worry about security
+                    issues or performance. Regarding the handling of sensitive data coming from the client network (such
+                    as configuration files, data feeds), the client will be able to choose the location of the cloud
+                    datacenter as well as whether all data will be encrypted. In this way, ARTEMIS-as-a-service will be
+                    available as a service to companies that do not want to install any software in their internal
+                    network or in cases where this process is expensive and time-consuming. Also, this service will be
+                    useful to companies that want access to remote (e.g. on another continent) sources of BGP data
+                    surveillance and network device configuration, since it will not require their physical presence
+                    (e.g. dedicated rackspace), with the extra costs this involves.</p>
                 <hr>
             </div>
 
@@ -274,77 +225,22 @@
     </div>
     <!-- /.container -->
 
-    <div class="container my-1 section" id="poreia">
-        <div class="text-center mb-5">
-            <h2 class="section-heading text-uppercase">Πορεια</h2>
-            <h3 class="section-subheading text-muted">Τα τελευταία νέα για την πορεία του έργου.</h3>
-        </div>
-        <ul class="timeline">
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="" alt=""></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="subheading">First Progress Post</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p class="text-muted">The details of the first progress post will go here</p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="" alt=""></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="subheading">Second Progress Post</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p class="text-muted">The details of the second progress post will go here</p>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="" alt=""></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="subheading">Third Progress Post</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p class="text-muted">The details of the third progress post will go here</p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="" alt=""></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 class="subheading">Fourth News Post</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p class="text-muted">The details of the fourth progress post will go here</p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-
     <a class="btn btn-secondary btn-lg rounded-circle back-to-top" id="scroll_to_top" href="#">^</a>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark">
+    <footer class="py-4 bg-dark" id="footer-div">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 text-center ">
-                    <img src="images/el/espa.jpg" width="625" height="142" class="img-fluid rounded">
+                    <img src="images/en/espa.jpg" width="625" height="142" class="img-fluid rounded img_border">
                 </div>
 
                 <div class="col-lg-6 m-0 text-white text-white-50">
-                    Το έργο υλοποιείται στο πλαίσιο της Δράσης ΕΡΕΥΝΩ - ΔΗΜΙΟΥΡΓΩ - ΚΑΙΝΟΤΟΜΩ
-                    και συγχρηματοδοτείται από την
-                    Ευρωπαϊκή Ένωση και εθνικούς πόρους μέσω του Ε.Π. Ανταγωνιστικότητα, Επιχειρηματικότητα & Καινοτομία
-                    (ΕΠΑνΕΚ)
+                    The project is implemented in the context of the Action RESEARCH - CREATE - INNOVATE and is
+                    co-financed by the
+                    European Union and national resources through the O.P. Competitiveness, Entrepreneurship &
+                    Innovation
+                    (EPAnEK).
                 </div>
             </div>
         </div>
