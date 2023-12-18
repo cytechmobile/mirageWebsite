@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Εγκατάσταση | MIRAGE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/styles.css" rel="stylesheet">
+
+    <script src="https://cdn.userway.org/widget.js" data-account="yBY9xhLTf4" data-size="large"></script>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Mirage</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Αρχική</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="partners.html">Φορείς</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project.html">Το έργο</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="progress.html">Πορεία</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://bgpartemis.org/">Artemis</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="publications.html">Δημοσιεύσεις</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Επικοινωνία</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="news.html">Νέα</a>
+                </li> -->
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="../install.html">EN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container pb-5">
+    <!-- Overview Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Εγκατάσταση και παραμετροποίηση</h1>
+            <hr>
+            <h2 class="section" id="mobile">Mobile Artemis</h2>
+            <h4>
+                Η διαδικασία εγκατάστασης της εφαρμογής Mobile Artemis αποτελείται από τα εξής μέρη:
+            </h4>
+            <ol>
+                <li>
+                    Εγκατάσταση IDE και Flutter
+                </li>
+                <li>
+                    Λήψη του κώδικα του Mobile Artemis αλλά και Artemis Web
+                </li>
+                <li>
+                    (Προαιρετικό) Δημιουργία Firebase project και διασύνδεσης της εφαρμογής με αυτό(προαιρετικό σε περίπτωση που ο χρήστης δεν ενδιαφέρεται να
+                    λαμβάνει push
+                    notifications για τα Hijacks που ανίχνευσε το ARTEMIS)
+                </li>
+                <li>
+                    (Προεραιτικό) Προσθήκη credentials στο Artemis web για λήψη SMS μέσω του <a href="https://www.prosms.gr" target="_blank">prosms.gr</a> ή
+                    διασύνδεση με
+                    άλλο πάροχο(προαιρετικό σε περίπτωση που ο χρήστης δεν ενδιαφέρεται να λαμβάνει SMS)
+                </li>
+                <li>
+                    Δημιουργία Android app bundle ή apk και iOS App Store Package για συσκευές με Android και iOS αντίστοιχα
+                </li>
+            </ol>
+            Η εφαρμογή μπορεί να τρέξει στις παρακάτω εκδόσεις:<br>
+            <ul>
+                <li>
+                    Android versions: 5.0 και νεότερες<br>
+                </li>
+                <li>
+                    iOS versions: 9.0 και νεότερες
+                </li>
+            </ul>
+            Οι παραπάνω minimum εκδόσεις Android και iOS στις οποίες μπορεί να τρέξει η εφαρμογή μπορεί να αλλάξουν μελλοντικά λόγω νέων εκδόσεων των packages
+            και plugins που χρησιμοποιεί η εφαρμογή καθώς και του ίδιου του Flutter framework.
+            <hr>
+
+            <h5 class="section" id="ide_flutter">Εγκατάσταση Flutter και IDE</h5>
+            <ul>
+                <li>
+                    Εγκατάσταση Flutter
+                    <ol>
+                        <li>
+                            Για τη λήψη και εγκατάσταση του Flutter ακολουθήστε τον επίσημο οδηγό εγκατάστασης του Flutter ανάλογα με λειτουργικό σας σύστημα
+                            στον παρακάτω σύνδεσμο: <a href="https://docs.flutter.dev/get-started/install" target="_blank">https://docs.flutter.dev/get-started/install</a>
+                        </li>
+                        <li>
+                            Μόλις ολοκληρωθεί η παραπάνω διαδικασία για να βεβαιωθείτε ότι η εγκατάσταση έγινε σωστά μπορείτε να τρέξετε την εντολή:
+                            <code>
+                                flutter doctor
+                            </code>
+                        </li>
+                    </ol>
+                    Σε περίπτωση που έχετε ήδη εγκαταστήσει το Flutter βεβαιωθείτε ότι χρησιμοποιείτε την πιο πρόσφατη έκδοση του. Για να ελέγξετε τη version
+                    του τρέξτε την εντολή:
+                    <code>
+                        flutter -–version
+                    </code>
+                    Για να λάβετε την τελευταία έκδοση του τρέξτε την εντολή:
+                    <code>
+                        flutter upgrade
+                    </code>
+                </li>
+                <li>
+                    Εγκατάσταση IDE
+                    <ol>
+                        <li>
+                            Κατεβάστε και εγκαταστήστε το Android Studio από το επίσημο
+                            <a href="https://developer.android.com/studio" target="_blank">website</a>
+                        </li>
+                        <li>
+                            Σε περίπτωση που προτιμάτε το Visual Studio Code μπορείτε να το εγκαταστήσετε από
+                            <a href="https://code.visualstudio.com/Download" target="_blank">εδώ</a>
+                        </li>
+                    </ol>
+                    Μόλις ολοκληρωθεί η εγκατάσταση του Android Studio ή του Visual Studio Code θα χρειαστεί να εγκαταστήσετε και το <a
+                        href="https://docs.flutter.dev/get-started/editor" target="_blank">flutter plugin</a> για το IDE που επιλέξατε παραπάνω.
+                </li>
+            </ul>
+            <hr>
+
+
+            <h5 class="section" id="sourcecode_clone">Λήψη του κώδικα του Mobile Artemis αλλά και Artemis Web</h5>
+            <ol>
+                <li>
+                    Για να κάνετε λήψη του κώδικα της εφαρμογής για κινητά τρέξτε την εντολή
+                    <code>
+                        git clone git@github.com:FORTH-ICS-INSPIRE/artemis_mobile.git
+                    </code>
+                </li>
+                <li>
+                    Στο root folder του project που μόλις λάβατε τρέξτε την εντολή παρακάτω για να λάβετε τα προαπαιτούμενα που περιέχονται στο pubspec.yaml και
+                    χρειάζεται η εφαρμογή για να τρέξει
+                    <code>
+                        flutter pub get
+                    </code>
+                </li>
+                <li>
+                    Προσθέστε το url του Artemis μέσα στο /lib/services/api_service.dart στο apiUrl
+                </li>
+                <li>
+                    (Optional) Σε περίπτωση που θα θέλατε να χρησιμοποιήσετε τα push notifications θα χρειαστεί να κάνετε λήψη του κώδικα του Artemis Web
+                    τρέχοντας την εντολή
+                    <code>
+                        git clone https://github.com/FORTH-ICS-INSPIRE/artemis-web.git
+                    </code>
+                </li>
+            </ol>
+            <hr>
+
+            <h5 class="section" id="push_notifications">(Προαιρετικό) Δημιουργία Firebase project και διασύνδεσης της εφαρμογής με αυτό</h5>
+            <ol>
+                <li>
+                    Δημιουργήστε ένα νέο firebase project
+                    <a href="https://console.firebase.google.com/" target="_blank">εδώ</a>
+                </li>
+                <li>
+                    Εάν δεν έχετε ήδη εγκατεστημένο το Firebase CLI εγκαταστήστε το χρησιμοποιώντας τον επίσημο οδηγό εγκατάστασης
+                    <a href="https://firebase.google.com/docs/cli#setup_update_cli/" target="_blank">εδώ</a>
+                </li>
+                <li>
+                    Κάντε login στο firebase χρησιμοποιώντας το Google account σας με την εντολή
+                    <code>
+                        firebase login
+                    </code>
+                </li>
+                <li>
+                    Εγκαταστήστε το FlutterFire CLI τρέχοντας την εντολή
+                    <code>
+                        dart pub global activate flutterfire_cli
+                    </code>
+                </li>
+                <li>
+                    Για να χρησιμοποιήσετε το flutterfire CLI για να συνδέσετε το Mobile Artemis με το firebase project που δημιουργήσατε τρέξτε από το root
+                    folder του project την εντολή
+                    <code>
+                        flutterfire configure
+                    </code>
+                </li>
+                <li>
+                    Ανοίξτε το αρχείο lib/services/push_notification_service.dart και προσθέστε την παρακάτω γραμμή
+                    <code>
+                        import 'firebase_options.dart';
+                    </code>
+                </li>
+                <li>
+                    Στο ίδιο αρχείο προσθέστε μέσα στην firebase initialize app τα παρακάτω options:
+                    <code>
+                        options: DefaultFirebaseOptions.currentPlatform,
+                    </code>
+                </li>
+                <li>
+                    Έπειτα θα χρειαστεί να δημιουργήσετε ένα private key για το service account σας. Μπορείτε να ακολουθήσετε τον επίσημο οδηγό
+                    <a href="https://firebase.google.com/docs/admin/setup" target="_blank">εδώ</a>. Το κλειδί θα περιέχεται σε ένα json αρχείο.
+                </li>
+                <li>
+                    Ανοίξτε το Artemis Web project και μέσα στο .env αρχείο προσθέστε το file path στο SERVICE_ACCOUNT_PATH
+                </li>
+
+                Για να λαμβάνετε push notifications σε iOS συσκευές θα πρέπει να κάνετε κάποια επιπλέον βήματα. Ακολουθείστε τον οδηγό
+                <a href="https://firebase.google.com/docs/cloud-messaging/flutter/client" target="_blank">εδώ</a>
+            </ol>
+            <hr>
+
+
+            <h5 class="section" id="fallback_sms">(Προαιρετικό) Προσθήκη credentials στο Artemis web για λήψη SMS</h5>
+            <p>
+                Για την λήψη SMS υπάρχει ένα reference implementation με χρήση του <a href="https://www.prosms.gr" target="_blank">prosms.gr</a>.
+                Σε περίπτωση που επιλεγεί το prosms ως provider προσθέστε τα SMS_USERNAME, SMS_PASSWORD, και SMS_ORIGINATOR μέσα στο .env αρχείο στο Artemis Web
+                project<br>
+                Για την χρήση άλλου παρόχου SMS θα χρειαστεί να τροποποιήσετε την sendSMS() μέσα στο apps/artemis-notification/src/main.ts στο Artemis Web
+                project.<br>
+            </p>
+            <hr>
+
+            <h5 class="section" id="build_appbundle_ipa">Δημιουργία εκτελέσιμων για Android και iOS</h5>
+            <ul>
+                <li>
+                    Για τη δημιουργία apk για Android συσκευές τρέξτε από το root folder
+                    <code>
+                        flutter build apk
+                    </code>
+                </li>
+                <li>
+                    Για την δημιουργία app bundle για Android συσκευές τρέξτε από το root folder
+                    <code>
+                        flutter build appbundle
+                    </code>
+                </li>
+                <li>
+                    Για τη δημιουργία ipa για iOS συσκευές τρέξτε από το root folder
+                    <code>
+                        flutter build ipa
+                    </code>
+                    <p>Σημείωση: Για τη δημιουργία του ipa απαιτείται η χρήση Mac συσκευής</p>
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+
+<a class="btn btn-secondary btn-lg rounded-circle back-to-top" id="scroll_to_top" href="#">^</a>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark" id="footer-div">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center ">
+                <img src="../images/el/espa.jpg" width="625" height="142" class="img-fluid rounded img_border">
+            </div>
+
+            <div class="col-lg-6 m-0 text-white text-white-50">
+                Το έργο υλοποιείται στο πλαίσιο της Δράσης ΕΡΕΥΝΩ - ΔΗΜΙΟΥΡΓΩ - ΚΑΙΝΟΤΟΜΩ
+                και συγχρηματοδοτείται από την
+                Ευρωπαϊκή Ένωση και εθνικούς πόρους μέσω του Ε.Π. Ανταγωνιστικότητα, Επιχειρηματικότητα & Καινοτομία
+                (ΕΠΑνΕΚ)
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../js/scroll_top.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

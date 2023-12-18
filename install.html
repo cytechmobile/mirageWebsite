@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Install | MIRAGE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="https://cdn.userway.org/widget.js" data-account="yBY9xhLTf4" data-size="large"></script>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Mirage</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="partners.html">Partners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project.html">The Project</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="progress.html">Progress</a>
+                  </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://bgpartemis.org/">Artemis</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="publications.html">Publications</a>
+                  </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="news.html">News</a>
+                  </li> -->
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="el/install.html">EL</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container pb-5">
+    <!-- Overview Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Installation and Setup</h1>
+            <hr>
+            <h2 class="section" id="mobile">Mobile Artemis</h2>
+            <h4>
+                Installation of Mobile Artemis consists of the following parts:
+            </h4>
+            <ol>
+                <li>
+                    IDE and Flutter installation
+                </li>
+                <li>
+                    Pulling the Mobile Artemis and Artemis web source code
+                </li>
+                <li>
+                    (Optional) Create a Firebase Project and link the app with it
+                </li>
+                <li>
+                    (Optional) Add credentials to receive fallback SMS using
+                    <a href="https://www.prosms.gr" target="_blank">prosms.gr</a> (or another SMS provider)
+                </li>
+                <li>
+                    Building the app bundle/apk and iOS App Store Package for Android and iOS devices respectively
+                </li>
+            </ol>
+
+            The versions the mobile app could be build are:<br>
+            <ul>
+                <li>
+                    Android versions: 5.0 and newer<br>
+                </li>
+                <li>
+                    iOS versions: 9.0 and newer
+                </li>
+            </ul>
+            The above minimum versions that the app could be built for, are subject to change due to the new versions of the application's plugins and packages
+            and the Flutter framework itself.
+            <hr>
+
+            <h5 class="section" id="ide_flutter">Flutter and IDE installation</h5>
+            <ul>
+                <li>
+                    Install flutter
+                    <ol>
+                        <li>
+                            To download and install flutter follow the official installation guide <a href="https://docs.flutter.dev/get-started/install" target="_blank">https://docs.flutter.dev/get-started/install</a>
+                        </li>
+                        <li>
+                            To make sure that you have set up everything correctly run:
+                            <code>
+                                flutter doctor
+                            </code>
+                        </li>
+                    </ol>
+                    In case you have already installed Flutter make sure you have the latest version by running the following command
+                    <code>
+                        flutter -–version
+                    </code>
+                    To get the latest version run:
+                    <code>
+                        flutter upgrade
+                    </code>
+                </li>
+                <li>
+                    Install IDE
+                    <ol>
+                        <li>
+                            Download and install Android Studio from the official website
+                            <a href="https://developer.android.com/studio" target="_blank">here</a>
+                        </li>
+                        <li>
+                            To download and install Visual Studio Code follow the official guide
+                            <a href="https://code.visualstudio.com/Download" target="_blank">here</a>
+                        </li>
+                    </ol>
+                    After installing Android Studio or Visual Studio Code you will need the flutter plugin for your IDE. Install it for your IDE following the
+                    guide <a href="https://docs.flutter.dev/get-started/editor" target="_blank">here</a>
+                </li>
+            </ul>
+            <hr>
+
+
+            <h5 class="section" id="sourcecode_clone">Pulling the Mobile Artemis and Artemis Web source code</h5>
+            <ol>
+                <li>
+                    Clone the repository using the following command
+                    <code>
+                        git clone git@github.com:FORTH-ICS-INSPIRE/artemis_mobile.git
+                    </code>
+                </li>
+                <li>
+                    Install the required dependencies included in pubspec.yaml by running from the project root folder
+                    <code>
+                        flutter pub get
+                    </code>
+                </li>
+                <li>
+                    Add the url of Artemis in apiUrl inside /lib/services/api_service.dart
+                </li>
+                <li>
+                    (Optional) In case you will be using the push notifications and the fallback sms you will also need to clone Artemis Web by running
+                    <code>
+                        git clone https://github.com/FORTH-ICS-INSPIRE/artemis-web.git
+                    </code>
+                </li>
+            </ol>
+            <hr>
+
+            <h5 class="section" id="push_notifications">(Optional) Create Firebase project and link to Mobile Artemis</h5>
+            <ol>
+                <li>
+                    Create and setup a firebase project from firebase
+                    <a href="https://console.firebase.google.com/" target="_blank">here</a>
+                </li>
+                <li>
+                    If you haven't already install the Firebase CLI following the official firebase CLI installation
+                    <a href="https://firebase.google.com/docs/cli#setup_update_cli/" target="_blank">guide</a>
+                </li>
+                <li>
+                    Log into Firebase using your Google account by running
+                    <code>
+                        firebase login
+                    </code>
+                </li>
+                <li>
+                    Install the FlutterFire CLI by running the following command
+                    <code>
+                        dart pub global activate flutterfire_cli
+                    </code>
+                </li>
+                <li>
+                    To use the FlutterFire CLI to connect Mobile Artemis application to your Firebase project run from your projects root folder
+                    <code>
+                        flutterfire configure
+                    </code>
+                </li>
+                <li>
+                    In lib/services/push_notification_service.dart import the generated firebase_options.dart file by adding
+                    <code>
+                        import 'firebase_options.dart';
+                    </code>
+                </li>
+                <li>
+                    Also in lib/services/push_notification_service.dart add the options of initialization to use the exported DefaultFirebaseOptions class
+                    existing in firebase_options.dart file. The firebase initialize app should look like:
+                    <code>
+                        options: DefaultFirebaseOptions.currentPlatform,
+                    </code>
+                </li>
+                <li>
+                    Next, you will need to generate a private key for your service account by following the guide
+                    <a href="https://firebase.google.com/docs/admin/setup" target="_blank">here</a>. The key will be in the form of a json file.
+                </li>
+                <li>
+                    Open the Artemis Web project and add the file path inside the .env file in SERVICE_ACCOUNT_PATH
+                </li>
+                To be able to receive push notifications on an iOS device you will need to do some extra steps as described
+                <a href="https://firebase.google.com/docs/cloud-messaging/flutter/client" target="_blank">here</a>
+            </ol>
+            <hr>
+
+
+            <h5 class="section" id="fallback_sms">(Optional) Add credentials to receive fallback SMS using <a href="https://www.prosms.gr" target="_blank">prosms.gr</a>
+                (or another SMS provider)</h5>
+            <p>
+                To be able to receive SMS messages you will need to setup a provider. Inside apps/artemis-notification/src/main.ts there is a reference
+                implementation using <a href="https://www.prosms.gr" target="_blank">prosms.gr</a>. Keep in mind that SMS messages will be sent only to users
+                that did not receive the push notification.<br>
+                * If you choose to use another provider you will need to modify the sendSMS function in the same file according to your SMS provider's
+                specifications.<br>
+                * In case you choose prosms all you need to do is set the SMS_USERNAME, SMS_PASSWORD and SMS_ORIGINATOR inside the .env file.<br>
+            </p>
+            <hr>
+
+            <h5 class="section" id="build_appbundle_ipa">Building the app bundle/apk and iOS App Store Package for Android and iOS devices </h5>
+            <ul>
+                <li>
+                    To create an apk executable for Android devices execute from the root folder
+                    <code>
+                        flutter build apk
+                    </code>
+                </li>
+                <li>
+                    To create an app bundle executable for Android devices execute from the root folder
+                    <code>
+                        flutter build appbundle
+                    </code>
+                </li>
+                <li>
+                    To create an app bundle executable for iOS devices execute from the root folder
+                    <code>
+                        flutter build ipa
+                    </code>
+                    <p>Note: To be able to create an ipa executable a Mac device is needed</p>
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+
+<a class="btn btn-secondary btn-lg rounded-circle back-to-top" id="scroll_to_top" href="#">^</a>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark" id="footer-div">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center ">
+                <img src="images/en/espa.jpg" width="625" height="142" class="img-fluid rounded img_border">
+            </div>
+
+            <div class="col-lg-6 m-0 text-white text-white-50">
+                The project is implemented in the context of the Action RESEARCH - CREATE - INNOVATE and is
+                co-financed by the
+                European Union and national resources through the O.P. Competitiveness, Entrepreneurship &
+                Innovation
+                (EPAnEK).
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="js/scroll_top.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
